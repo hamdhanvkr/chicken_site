@@ -35,13 +35,13 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4 lg:text-lg  font-bold">
+                <div className="pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-lg  font-bold">
                     <p className="text-white opacity-80 text-center sm:text-left">
-                        © {new Date().getFullYear()} Salsabeel Maju Resources
+                        © {new Date().getFullYear()} Salsabeel Maju Resources. All Rights Reserved.
                     </p>
 
                     <p className="text-white text-center sm:text-right ">
-                        Site by <span className="text-amber-500 ml-1">Hamdhan Jahir</span>
+                        Developed by <span className="text-amber-500 ml-1">Hamdhan Jahir</span>
                     </p>
                 </div>
             </div>
