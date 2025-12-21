@@ -21,6 +21,7 @@ import Img14 from "../../assets/14.jpeg";
 function Products() {
   const navigate = useNavigate();
   const products = [
+    { img: Img12, name: "Whole Chicken" },
     { img: Img1, name: "Whole Leg" },
     { img: Img2, name: "Drumstick" },
     { img: Img3, name: "Wings" },
@@ -32,7 +33,6 @@ function Products() {
     { img: Img9, name: "Sotong Frozen" },
     { img: Img10, name: "Kambing Frozen" },
     { img: Img11, name: "Daging Frozen" },
-    { img: Img12, name: "Whole Chicken" },
     { img: Img13, name: "Tomyan Frozen" },
     { img: Img14, name: "Tengiri Frozen" },
   ];
