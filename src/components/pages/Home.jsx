@@ -1,106 +1,67 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaCheckCircle, FaTruck, FaLeaf, FaShieldAlt } from "react-icons/fa";
-import Img2 from "../../assets/2.jpeg";
+import { FaShieldAlt, FaTruck, FaAward } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Img1 from "../../assets/1.jpeg";
 
-// Clean, corporate variants
-const fadeUp = {
-    hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
 };
 
 export default function Home() {
-    return (
-        <div className="min-h-screen  text-gray-800">
-            {/* HERO */}
-            <section className="bg-white">
-                <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-14 items-center">
-                    <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-                        <p className="text-sm font-semibold tracking-widest text-gray-500 uppercase mb-4">Premium Poultry Supplier</p>
-                        <h1 className="text-5xl font-extrabold leading-tight text-gray-900">
-                            Trusted Farm-Fresh Poultry
-                            <span className="block text-green-700">for Malaysia</span>
-                        </h1>
-                        <p className="mt-6 text-lg text-gray-600 max-w-xl">
-                            We supply hygienically processed, ethically raised poultry products to retailers, wholesalers, and food service partners across Malaysia.
-                        </p>
-                        <div className="mt-10 flex flex-wrap gap-4">
-                            <a
-                                href="/products"
-                                className="bg-green-500 px-10 text-lg py-4 rounded-lg border border-gray-300 text-white font-semibold hover:bg-green-600 transition"
-                            >
-                                Our Products
-                            </a>
-                        </div>
-                    </motion.div>
-
-                    {/* Right visual (minimal, professional) */}
-                    <motion.div
-                        className="rounded-3xl p-10"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.8 }}
-                    >
-
-                        <img
-                            src={Img2}
-                            alt="product"
-                            className="w-full h-56 object-fit hover:scale-110 transition duration-500"
-                        />
-                        {/* <ul className="space-y-6">
-              <li className="flex items-start gap-4">
-                <FaCheckCircle className="text-green-700 mt-1" />
-                <span className="text-gray-700">Halal-compliant processing standards</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <FaShieldAlt className="text-green-700 mt-1" />
-                <span className="text-gray-700">Strict hygiene & quality assurance</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <FaLeaf className="text-green-700 mt-1" />
-                <span className="text-gray-700">Antibiotic & hormone-free farming</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <FaTruck className="text-green-700 mt-1" />
-                <span className="text-gray-700">Reliable cold-chain logistics</span>
-              </li>
-            </ul> */}
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* VALUE PROPOSITION */}
-            <section className="max-w-7xl mx-auto px-6 py-20">
-                <motion.div
-                    className="grid md:grid-cols-3 gap-10"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
-                    {["Consistent Supply", "Certified Quality", "Business-Focused Service"].map((title, i) => (
-                        <motion.div
-                            key={i}
-                            variants={fadeUp}
-                            className="bg-white rounded-xl border p-8 shadow-sm"
-                        >
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Designed to meet the needs of supermarkets, restaurants, and distributors with dependable volumes and professional support.
-                            </p>
-                        </motion.div>
-                    ))}
-                </motion.div>
-            </section>
-
-            <div>
-                <footer className="bg-gray-900 text-gray-400">
-                    <div className="w-full py-6 flex justify-around">
-                        <p className="text-lg">© {new Date().getFullYear()} Salsabeel Maju Malaysia. All rights reserved.</p>
-                        <p className="text-lg">Developed by Hamdhan Jahir</p>
-                    </div>
-                </footer>
+  return (
+    <div className="pt-20 overflow-hidden">
+      {/* HERO SECTION */}
+      <section className="relative px-2 py-20 lg:py-32">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
+            <span className="bg-amber-100 text-amber-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Premium Quality</span>
+            <h1 className="text-4xl lg:text-7xl font-black text-gray-900 mt-6 leading-none">
+              Freshness You  
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-amber-600"> Can Trust.</span>
+            </h1>
+            <p className="mt-8 text-lg text-gray-600 leading-relaxed max-w-lg text-justify">
+              Salsabeel Maju delivers ethically raised, Halal-compliant poultry products directly from our farm to your business or doorstep.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <Link to="/products" className="px-8 py-4 bg-green-600 text-white rounded-xl font-bold shadow-xl shadow-green-100 hover:bg-green-700 transition-all text-center">
+                Explore Products
+              </Link>
+              <Link to="/about" className="px-8 py-4 border-2 border-gray-200 text-gray-900 rounded-xl font-bold hover:bg-gray-50 transition-all text-center">
+                Our Story
+              </Link>
             </div>
-        </div>
+          </motion.div>
 
-    );
+          <motion.div 
+            className="relative"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="absolute -inset-4 bg-amber-500/10 rounded-full blur-3xl" />
+            <img src={Img1} alt="Poultry" className="relative w-full h-[400px] object-fit rounded-[2rem] shadow-2xl" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* STATS/FEATURES */}
+      <section className="bg-gray-50 py-20 px-2">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+          {[
+            { icon: FaShieldAlt, title: "Halal", desc: "Strict adherence to Islamic slaughtering and processing standards." },
+            { icon: FaAward, title: "Hormone Free", desc: "Naturally raised poultry without growth hormones or antibiotics." },
+            { icon: FaTruck, title: "Supply", desc: "Advanced logistics to ensure products stay fresh during delivery." }
+          ].map((item, i) => (
+            <div key={i} className="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
+              <item.icon className="text-4xl text-amber-600 mb-6" />
+              <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
 }
