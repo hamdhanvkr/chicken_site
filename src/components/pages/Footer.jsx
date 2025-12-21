@@ -11,7 +11,7 @@ export default function Footer() {
 
                     <div className="flex flex-col items-center sm:items-start">
                         <span className="text-3xl lg:text-2xl font-black text-white mb-2">
-                            Salsabeel  <span className="text-amber-500">Maju</span>
+                            SMR<span className="text-amber-500">Groups</span>
                         </span>
                     </div>
 
