@@ -23,7 +23,7 @@ function About() {
               Quality Poultry <br />
               <span className="text-amber-600">Rooted in Trust.</span>
             </h1>
-            <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
+            <p className="text-lg lg:text-xl text-gray-600 leading-relaxed text-justify">
               Salsabeel Maju is more than a supplier. We are a dedicated
               providing Halal, farm-fresh poultry across Malaysia.
             </p>
@@ -87,7 +87,7 @@ function About() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="p-10 border border-gray-100 rounded-3xl hover:shadow-xl transition-shadow duration-300 bg-white"
+                className="p-5 border border-gray-100 rounded-3xl hover:shadow-xl transition-shadow duration-300 bg-white"
               >
                 <div className="text-amber-600 text-3xl mb-6">{item.icon}</div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h4>
