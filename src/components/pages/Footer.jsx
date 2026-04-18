@@ -49,7 +49,7 @@ export default function Footer() {
                             rel="noopener noreferrer"
                             className="text-amber-500 ml-1 hover:underline transition"
                         >
-                           Developed by Hamdhan Jahir
+                           Developed by Mohamed Hamdhan
                         </a>
                     </p>
                 </div>
